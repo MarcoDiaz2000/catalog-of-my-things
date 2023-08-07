@@ -134,9 +134,9 @@ You can deploy this project using:
 
 👤 **Marco diaz**
 
-- GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- GitHub: [@MarcoDiaz](https://github.com/MarcoDiaz2000)
+- Twitter: [@MarcoDiaz](https://twitter.com/MarcoDi70620847)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marco-diaz-0876a7268/)
 
 👤 **Tamoor Saeed**
 
