@@ -13,47 +13,47 @@ class LibraryOperations
   }.freeze
   # option 1
   def list_books
-    book.list
+    "book.list"
   end
 
   # option 2
   def list_music_albums
-    music_album.list
+    "music_album.list"
   end
 
   # option 3
   def list_games
-    game.list
+    "game.list"
   end
 
   # option 4
   def list_genres
-    genre.list
+    "genre.list"
   end
 
   # option 5
   def list_labels
-    label.list
+    "label.list"
   end
 
   # option 6
   def list_authors
-    author.list
+    "author.list"
   end
 
   # option 7
   def add_book
-    book.add
+    "book.add"
   end
 
   # option 8
   def add_music_album
-    music_album.add
+    "music_album.add"
   end
 
   # option 9
   def add_game
-    game.add
+    "game.add"
   end
 
   # option 10
