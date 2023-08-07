@@ -3,7 +3,7 @@
 <div align="center">
 
 
-  <h3><b>TDD Project
+  <h3><b>catalog-of-my-things
 
 </b></h3>
 
