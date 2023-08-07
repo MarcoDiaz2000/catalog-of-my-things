@@ -144,11 +144,11 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://www.linkedin.com/in/tamoor-saeed-58912a233/)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tamoorsaeed/)
 
-👤 **Abdulali Noori**
+👤 **Abdul Ali Noori**
 
-- GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- GitHub: [@ab-noori](https://github.com/ab-noori)
+- Twitter: [@AbdulAliNoori4](https://twitter.com/AbdulAliNoori4)
+- LinkedIn: [abdulali-noori](https://www.linkedin.com/in/abdulali-noori)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
