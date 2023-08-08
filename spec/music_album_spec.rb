@@ -4,7 +4,7 @@ require_relative '../music_album'
 
 describe MusicAlbum do
   before(:each) do
-    @music_album = MusicAlbum.new(Time.now - 11 * 365 * 24 * 60 * 60, on_spotify: true)
+    @music_album = MusicAlbum.new(Time.now - (11 * 365 * 24 * 60 * 60), on_spotify: true)
   end
 
   describe '#initialize' do
@@ -24,7 +24,7 @@ describe MusicAlbum do
     end
 
     it 'returns false if published_date is less than 10 years ago' do
-      @music_album.published_date = Time.now - 9 * 365 * 24 * 60 * 60
+      @music_album.published_date = Time.now - (9 * 365 * 24 * 60 * 60)
       expect(@music_album.can_be_archived?).to be false
     end
   end

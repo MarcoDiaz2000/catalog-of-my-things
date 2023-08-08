@@ -4,13 +4,13 @@ require_relative '../item'
 
 describe Genre do
   before(:each) do
-    @genre = Genre.new("Rock")
+    @genre = Genre.new('Rock')
     @item = Item.new
   end
 
   describe '#initialize' do
     it 'initializes with correct name' do
-      expect(@genre.name).to eq("Rock")
+      expect(@genre.name).to eq('Rock')
     end
   end
 
