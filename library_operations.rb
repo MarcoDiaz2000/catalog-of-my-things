@@ -1,4 +1,12 @@
+require_relative 'music_album_operations'
+require_relative 'genre_operations'
+
 class LibraryOperations
+  def initialize
+    @music_album_operations = MusicAlbumOperations.new
+    @genre_operations = GenreOperations.new
+  end
+
   ACTIONS = {
     1 => :list_books,
     2 => :list_music_albums,
@@ -18,7 +26,7 @@ class LibraryOperations
 
   # option 2
   def list_music_albums
-    'music_album.list'
+    @music_album_operations.list
   end
 
   # option 3
@@ -28,7 +36,7 @@ class LibraryOperations
 
   # option 4
   def list_genres
-    'genre.list'
+    @genre_operations.list
   end
 
   # option 5
@@ -48,7 +56,7 @@ class LibraryOperations
 
   # option 8
   def add_music_album
-    'music_album.add'
+    @music_album_operations.add_music_album(@genre_operations)
   end
 
   # option 9
@@ -64,7 +72,7 @@ class LibraryOperations
 
   def execute_option(option)
     if ACTIONS.key?(option)
-      puts send(ACTIONS[option])
+      send(ACTIONS[option])
     else
       puts 'Invalid selection. Please choose a valid option.'
     end
