@@ -12,7 +12,7 @@ class Label
   def add_item(item)
     return unless item.is_a?(Item)
 
-    item.label = self.title
+    item.label = title
   end
 
   private
