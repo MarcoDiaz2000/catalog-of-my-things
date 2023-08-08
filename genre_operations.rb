@@ -3,7 +3,6 @@ require_relative 'genre'
 class GenreOperations
   attr_accessor :genres
 
-
   def initialize
     @genres = [Genre.new('Rock'), Genre.new('Pop'), Genre.new('Jazz'), Genre.new('Classical')]
   end

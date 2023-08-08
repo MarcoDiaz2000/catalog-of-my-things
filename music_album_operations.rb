@@ -13,7 +13,7 @@ class MusicAlbumOperations
       puts 'The list is empty.'
     else
       @albums.each do |album|
-        puts "Album id: #{album.id}, genre: #{album.genre.name}, published date: #{album.published_date}, "\
+        puts "Album id: #{album.id}, genre: #{album.genre.name}, published date: #{album.published_date},"\
              "on Spotify: #{album.on_spotify}  archived: #{album.archived}"
       end
     end
@@ -72,7 +72,7 @@ class MusicAlbumOperations
   end
 
   def print_album_details(album, genre)
-    puts "Album id: #{album.id}, genre: #{genre.name}, published date: #{album.published_date}, "\
+    puts "Album id: #{album.id}, genre: #{genre.name}, published date: #{album.published_date},"\
          "on Spotify: #{album.on_spotify}  archived: #{album.archived}"
   end
 end
