@@ -12,8 +12,7 @@ class Label
   def add_item(item)
     return unless item.is_a?(Item)
 
-    @items << item
-    item.label = self
+    item.label = self.title
   end
 
   private

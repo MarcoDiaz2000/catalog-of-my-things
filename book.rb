@@ -14,10 +14,7 @@ class Book < Item
   private
 
   def can_be_archived?
-    return false unless super
-
-    # Add additional conditions specific to Book class for archiving
-
-    true
+    return true if super || @cover_state == "bad"
+    false
   end
 end
