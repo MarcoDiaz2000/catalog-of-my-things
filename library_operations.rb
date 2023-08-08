@@ -13,7 +13,7 @@ class LibraryOperations
   }.freeze
   # option 1
   def list_books
-    'book.list'
+    'list.books'
   end
 
   # option 2
@@ -64,7 +64,7 @@ class LibraryOperations
 
   def execute_option(option)
     if ACTIONS.key?(option)
-      send(ACTIONS[option])
+      puts send(ACTIONS[option])
     else
       puts 'Invalid selection. Please choose a valid option.'
     end
