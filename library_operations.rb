@@ -56,7 +56,7 @@ class LibraryOperations
 
   # option 8
   def add_music_album
-    @music_album_operations.add_music_album
+    @music_album_operations.add_music_album(@genre_operations)
   end
 
   # option 9
