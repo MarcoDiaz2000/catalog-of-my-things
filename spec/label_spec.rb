@@ -15,7 +15,7 @@ describe Label do
     end
 
     it 'does not add non-Item objects to the label' do
-      non_item = 'Not items'
+      non_item = 'Not an item'
       @label.add_item(non_item)
 
       expect(@label.items).to be_empty
