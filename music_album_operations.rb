@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'item'
 require_relative 'music_album'
 
@@ -6,6 +7,7 @@ class MusicAlbumOperations
 
   def initialize
     @albums = []
+    load_json
   end
 
   def list
@@ -28,10 +30,46 @@ class MusicAlbumOperations
     album
   end
 
+  def save_json
+    albums_json = @albums.map do |album|
+      {
+        id: album.id,
+        genre: album.genre.name,
+        published_date: album.published_date.to_s,
+        on_spotify: album.on_spotify,
+        archived: album.archived
+      }
+    end
+
+    File.write('music_album.json', JSON.pretty_generate(albums_json))
+
+    puts 'Albums saved successfully.'
+  end
+
+  def load_json
+    return unless File.exist?('music_album.json')
+
+    file_content = File.read('music_album.json')
+    albums_json = JSON.parse(file_content)
+    albums_json.each do |album_json|
+      genre_obj = Genre.new(album_json['genre'])
+      album = MusicAlbum.new(
+        Date.parse(album_json['published_date']),
+        on_spotify: album_json['on_spotify'],
+        archived: album_json['archived']
+      )
+      album.id = album_json['id']
+      album.genre = genre_obj
+      @albums << album
+    end
+
+    puts 'Albums loaded successfully.'
+  end
+
   def add_music_album(genre_operations)
     published_date = ask_for_published_date
     on_spotify = ask_if_on_spotify
-    genre = choose_genre(genre_operations)
+    genre = genre_operations.choose_genre
     album = create(published_date, on_spotify, genre)
     print_album_details(album, genre)
   end
