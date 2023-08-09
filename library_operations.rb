@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'music_album_operations'
 require_relative 'genre_operations'
 require_relative 'add_game'
@@ -97,6 +98,8 @@ class LibraryOperations
 
   # option 11
   def exit_program
+    @music_album_operations.save_json
+    @genre_operations.save_json
     puts 'Goodbye!'
     exit
   end
