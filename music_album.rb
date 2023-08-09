@@ -14,3 +14,4 @@ class MusicAlbum < Item
     @on_spotify
   end
 end
+

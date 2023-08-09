@@ -68,6 +68,7 @@ class LibraryOperations
   # option 10
   def exit_program
     @music_album_operations.save_json
+    @genre_operations.save_json
     puts 'Goodbye!'
     exit
   end

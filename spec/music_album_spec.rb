@@ -20,3 +20,4 @@ describe MusicAlbum do
     end
   end
 end
+

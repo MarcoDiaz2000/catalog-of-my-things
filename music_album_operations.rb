@@ -69,7 +69,7 @@ class MusicAlbumOperations
   def add_music_album(genre_operations)
     published_date = ask_for_published_date
     on_spotify = ask_if_on_spotify
-    genre = choose_genre(genre_operations)
+    genre = genre_operations.choose_genre
     album = create(published_date, on_spotify, genre)
     print_album_details(album, genre)
   end
