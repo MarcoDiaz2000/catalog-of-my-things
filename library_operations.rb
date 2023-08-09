@@ -87,10 +87,13 @@ class LibraryOperations
     print 'Is it a multiplayer game? [Y/N] '
     multiplayer = answer_yes?
 
+    print 'When was the game published? (YYYY-MM-DD) '
+    publish_date = gets.chomp
+
     print 'When was the last time it was played? (YYYY-MM-DD) '
     last_played_at = gets.chomp
 
-    game = Game.new(game_name, multiplayer, last_played_at, last_played_at) # Updated date fields
+    game = Game.new(game_name, multiplayer, publish_date, last_played_at) # Updated date fields
     @games << game
     GameData.save_data(games)
 
