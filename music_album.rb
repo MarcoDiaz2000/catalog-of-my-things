@@ -9,7 +9,7 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    return false unless published_date && published_date < (Time.now - (10 * 365 * 24 * 60 * 60))
+    return false unless published_date && published_date < (Date.today.prev_year(10))
 
     @on_spotify
   end
