@@ -36,8 +36,7 @@ class LibraryOperations
     7 => :add_book,
     8 => :add_music_album,
     9 => :add_game,
-    10 => :add_author,
-    11 => :exit_program
+    10 => :exit_program
   }.freeze
   # option 1
   def list_books
@@ -93,7 +92,17 @@ class LibraryOperations
     print 'When was the last time it was played? (YYYY-MM-DD) '
     last_played_at = gets.chomp
 
+    print 'Enter author first name: '
+    first_name = gets.chomp
+    print 'Enter author last name: '
+    last_name = gets.chomp
+
+    author = Author.new(first_name, last_name)
+    @authors << author
+    AuthorData.save_data(authors)
+
     game = Game.new(game_name, multiplayer, publish_date, last_played_at) # Updated date fields
+    game.author = author if author # Assign the author to the game
     @games << game
     GameData.save_data(games)
 
@@ -121,6 +130,7 @@ class LibraryOperations
     AuthorData.save_data(authors)
 
     puts 'Author added successfully!'
+    author # Return the created author
   end
 
   # option 11
