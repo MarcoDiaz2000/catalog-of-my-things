@@ -19,4 +19,3 @@ class Genre
     rand(1..1000)
   end
 end
-

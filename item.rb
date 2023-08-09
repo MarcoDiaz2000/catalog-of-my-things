@@ -32,4 +32,3 @@ class Item
     rand(10..300)
   end
 end
-
