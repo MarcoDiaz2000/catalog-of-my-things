@@ -7,14 +7,14 @@ class Genre
     @name = name
     @items = []
   end
-  
+
   def add_item(item)
     @items << item
     item.genre = self
   end
-  
+
   private
-  
+
   def generate_id
     rand(1..1000)
   end
