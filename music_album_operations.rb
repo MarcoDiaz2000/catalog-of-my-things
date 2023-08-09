@@ -41,9 +41,7 @@ class MusicAlbumOperations
       }
     end
 
-    File.open('music_album.json', 'w') do |f|
-      f.write(JSON.pretty_generate(albums_json))
-    end
+    File.write('music_album.json', JSON.pretty_generate(albums_json))
 
     puts 'Albums saved successfully.'
   end
