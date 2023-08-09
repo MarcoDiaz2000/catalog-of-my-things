@@ -27,8 +27,15 @@ describe Genre do
   end
 
   describe '#generate_id' do
-    it 'generates an ID between 1 and 1000' do
-      expect(@genre.id).to be_between(1, 1000)
+    it 'generates IDs between 1 and 1000' do
+      generated_ids = []
+
+      100.times do
+        @genre = Genre.new('Rock')
+        generated_ids << @genre.id
+      end
+
+      expect(generated_ids).to all(be_between(1, 1000))
     end
   end
 end
