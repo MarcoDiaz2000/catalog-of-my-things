@@ -13,11 +13,12 @@ class Label
     return unless item.is_a?(Item)
 
     item.label = title
+    items << item
   end
 
   private
 
   def generate_id
-    rand(1000..9999)
+    rand(100..999)
   end
 end
