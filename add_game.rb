@@ -3,7 +3,7 @@ require_relative 'game'
 
 class AddGame < AddItem
   def make_item(app)
-    publish_date = super('game')
+    super('game')
 
     print 'Is it a multiplayer game? [Y/N] '
     multiplayer = answer_yes?
