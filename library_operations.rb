@@ -6,8 +6,6 @@ require_relative 'list_games'
 require_relative 'list_authors'
 require_relative 'list_data'
 
-
-
 class LibraryOperations
   attr_reader :authors, :games
 
