@@ -19,6 +19,6 @@ class Label
   private
 
   def generate_id
-    rand(100..999)
+    rand(10..99)
   end
 end
