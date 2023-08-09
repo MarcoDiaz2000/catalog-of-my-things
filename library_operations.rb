@@ -6,6 +6,8 @@ require_relative 'author' # Make sure to include the Author class definition her
 require_relative 'list_games'
 require_relative 'list_authors'
 require_relative 'list_data'
+require_relative 'author_data'
+require_relative 'game_data'
 
 class LibraryOperations
   attr_reader :authors, :games
@@ -17,6 +19,8 @@ class LibraryOperations
     @games = [] # Initialize an array to store games
     @authors = []
     @games = []
+    @authors = AuthorData.read_data
+    @games = GameData.read_data
   end
 
   ACTIONS = {
@@ -79,6 +83,7 @@ class LibraryOperations
 
     game = Game.new(game_name, false, '2023-08-09', '2023-08-09') # Replace with appropriate values
     @games << game
+    GameData.save_data(games)
 
     puts 'Game added successfully!'
   end
@@ -92,6 +97,7 @@ class LibraryOperations
 
     author = Author.new(first_name, last_name)
     @authors << author
+    AuthorData.save_data(authors)
 
     puts 'Author added successfully!'
   end
