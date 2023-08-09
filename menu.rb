@@ -9,5 +9,6 @@ def print_menu
   puts '7. Add a book'
   puts '8. Add a music album'
   puts '9. Add a game'
-  puts '10. Exit'
+  puts '10.Add a author'
+  puts '11. exit'
 end

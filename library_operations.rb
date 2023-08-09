@@ -1,11 +1,22 @@
 require 'json'
 require_relative 'music_album_operations'
 require_relative 'genre_operations'
+require_relative 'add_game'
+require_relative 'author' # Make sure to include the Author class definition here
+require_relative 'list_games'
+require_relative 'list_authors'
+require_relative 'list_data'
 
 class LibraryOperations
+  attr_reader :authors, :games
+
   def initialize
     @music_album_operations = MusicAlbumOperations.new
     @genre_operations = GenreOperations.new
+    @authors = [] # Initialize an array to store authors
+    @games = [] # Initialize an array to store games
+    @authors = []
+    @games = []
   end
 
   ACTIONS = {
@@ -18,7 +29,8 @@ class LibraryOperations
     7 => :add_book,
     8 => :add_music_album,
     9 => :add_game,
-    10 => :exit_program
+    10 => :add_author,
+    11 => :exit_program
   }.freeze
   # option 1
   def list_books
@@ -32,7 +44,7 @@ class LibraryOperations
 
   # option 3
   def list_games
-    'game.list'
+    ListGames.new.list_items(@games)
   end
 
   # option 4
@@ -47,7 +59,7 @@ class LibraryOperations
 
   # option 6
   def list_authors
-    'author.list'
+    ListAuthors.new.list_authors(@authors)
   end
 
   # option 7
@@ -62,10 +74,29 @@ class LibraryOperations
 
   # option 9
   def add_game
-    'game.add'
+    print 'Enter game name: '
+    game_name = gets.chomp
+
+    game = Game.new(game_name, false, '2023-08-09', '2023-08-09') # Replace with appropriate values
+    @games << game
+
+    puts 'Game added successfully!'
   end
 
   # option 10
+  def add_author
+    print 'Enter author first name: '
+    first_name = gets.chomp
+    print 'Enter author last name: '
+    last_name = gets.chomp
+
+    author = Author.new(first_name, last_name)
+    @authors << author
+
+    puts 'Author added successfully!'
+  end
+
+  # option 11
   def exit_program
     @music_album_operations.save_json
     @genre_operations.save_json
