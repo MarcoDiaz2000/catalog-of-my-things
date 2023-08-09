@@ -8,6 +8,7 @@ require_relative 'list_authors'
 require_relative 'list_data'
 require_relative 'author_data'
 require_relative 'game_data'
+require_relative 'add_item'
 
 class LibraryOperations
   attr_reader :authors, :games
@@ -81,11 +82,26 @@ class LibraryOperations
     print 'Enter game name: '
     game_name = gets.chomp
 
-    game = Game.new(game_name, false, '2023-08-09', '2023-08-09') # Replace with appropriate values
+    print 'Is it a multiplayer game? [Y/N] '
+    multiplayer = answer_yes?
+
+    print 'When was the last time it was played? (YYYY-MM-DD) '
+    last_played_at = gets.chomp
+
+    game = Game.new(game_name, multiplayer, last_played_at, last_played_at) # Updated date fields
     @games << game
     GameData.save_data(games)
 
     puts 'Game added successfully!'
+  end
+
+  def answer_yes?
+    answer = gets.chomp
+    until %w[y yes n no true false].include?(answer.downcase)
+      print 'Wrong option, please enter [Y/N] '
+      answer = gets.chomp
+    end
+    %w[y yes true].include?(answer.downcase)
   end
 
   # option 10
