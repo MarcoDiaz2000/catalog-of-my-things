@@ -23,8 +23,6 @@ class Genre
     item.genre = self
   end
 
-  private
-
   def generate_id
     rand(1..1000)
   end
