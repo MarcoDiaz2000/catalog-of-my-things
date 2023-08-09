@@ -1,6 +1,7 @@
 require 'json'
 require_relative 'music_album_operations'
 require_relative 'genre_operations'
+require_relative 'book_operations'
 require_relative 'add_game'
 require_relative 'author' # Make sure to include the Author class definition here
 require_relative 'list_games'
@@ -15,6 +16,7 @@ class LibraryOperations
 
   def initialize
     @music_album_operations = MusicAlbumOperations.new
+    @book_operations = BookOperations.new
     @genre_operations = GenreOperations.new
     @authors = [] # Initialize an array to store authors
     @games = [] # Initialize an array to store games
@@ -39,7 +41,7 @@ class LibraryOperations
   }.freeze
   # option 1
   def list_books
-    'list.books'
+    @book_operations.list_books
   end
 
   # option 2
@@ -59,7 +61,7 @@ class LibraryOperations
 
   # option 5
   def list_labels
-    'label.list'
+    @book_operations.list_labels
   end
 
   # option 6
@@ -69,7 +71,7 @@ class LibraryOperations
 
   # option 7
   def add_book
-    'book.add'
+    @book_operations.add_book
   end
 
   # option 8
