@@ -1,9 +1,11 @@
 require_relative 'music_album_operations'
 require_relative 'genre_operations'
+require_relative 'book_operations'
 
 class LibraryOperations
   def initialize
     @music_album_operations = MusicAlbumOperations.new
+    @book_operations = BookOperations.new
     @genre_operations = GenreOperations.new
   end
 
@@ -21,7 +23,7 @@ class LibraryOperations
   }.freeze
   # option 1
   def list_books
-    'list.books'
+    @book_operations.list_books
   end
 
   # option 2
@@ -41,7 +43,7 @@ class LibraryOperations
 
   # option 5
   def list_labels
-    'label.list'
+    @book_operations.list_labels
   end
 
   # option 6
@@ -51,7 +53,7 @@ class LibraryOperations
 
   # option 7
   def add_book
-    'book.add'
+    @book_operations.add_book
   end
 
   # option 8
