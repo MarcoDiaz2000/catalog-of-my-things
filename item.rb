@@ -45,14 +45,4 @@ class Item
       archived: @archived
     }
   end
-
-  def self.from_hash(hash)
-    new_item = Item.new(hash[:published_date], archived: hash[:archived])
-    new_item.id = hash[:id]
-    new_item.genre = hash[:genre]
-    new_item.author = hash[:author]
-    new_item.source = hash[:source]
-    new_item.label = hash[:label]
-    new_item
-  end
 end
