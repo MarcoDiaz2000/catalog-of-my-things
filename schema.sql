@@ -1,3 +1,32 @@
+-- Create the Items table
+CREATE TABLE Items (
+    id SERIAL PRIMARY KEY,
+    genre VARCHAR(255),
+    author VARCHAR(255),
+    source VARCHAR(255),
+    label VARCHAR(255),
+    publish_date DATE,
+    archived BOOLEAN,
+    label_id INT,
+    CONSTRAINT fk_labels FOREIGN KEY (label_id) REFERENCES Labels(id) ON DELETE SET NULL
+);
+
+-- Create the Labels table
+CREATE TABLE Labels (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255),
+    color VARCHAR(50)
+);
+
+-- Create the Books table
+CREATE TABLE Books (
+    id SERIAL PRIMARY KEY,
+    publisher VARCHAR(255),
+    cover_state VARCHAR(50),
+    item_id INT,
+    CONSTRAINT fk_items FOREIGN KEY (item_id) REFERENCES Items(id) ON DELETE SET NULL
+);
+
 CREATE TABLE music_albums (
     id SERIAL PRIMARY KEY,
     item_id INT NOT NULL,
@@ -25,3 +54,4 @@ CREATE TABLE Author(
     FIRST_NAME VARCHAR(50),
     LAST_NAME VARCHAR(50)
 );
+
