@@ -16,6 +16,22 @@ class Label
     items << item
   end
 
+  def to_hash
+    {
+      id: @id,
+      title: @title,
+      color: @color,
+      items: @items.map(&:id)
+    }
+  end
+
+  def self.from_hash(hash)
+    new_label = Label.new(hash[:title], hash[:color])
+    new_label.id = hash[:id]
+    new_label.items = hash[:items] || []
+    new_label
+  end
+
   private
 
   def generate_id
