@@ -3,10 +3,13 @@ require_relative 'game'
 
 class AddGame < AddItem
   def make_item(app)
-    publish_date = super('game')
+    super('game')
 
     print 'Is it a multiplayer game? [Y/N] '
     multiplayer = answer_yes?
+
+    print 'When was the game published? (YYYY-MM-DD) '
+    publish_date = gets.chomp
 
     print 'When was the last time it was played? (YYYY-MM-DD) '
     last_played_at = gets.chomp
