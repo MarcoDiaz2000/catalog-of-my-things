@@ -16,6 +16,15 @@ class Label
     items << item
   end
 
+  def to_hash
+    {
+      id: @id,
+      title: @title,
+      color: @color,
+      items: @items.map(&:id)
+    }
+  end
+
   private
 
   def generate_id

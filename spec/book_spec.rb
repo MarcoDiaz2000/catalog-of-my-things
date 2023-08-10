@@ -2,7 +2,7 @@ require_relative 'spec_helper'
 
 describe Book do
   before :each do
-    @book = Book.new('Ofouq', 'good', Time.now - (11 * 365 * 24 * 60 * 60), archived: true)
+    @book = Book.new('Afghanistan', 'Ofouq', 'good', Time.now - (11 * 365 * 24 * 60 * 60), archived: true)
   end
 
   context ', Check an object:' do
@@ -11,6 +11,7 @@ describe Book do
     end
 
     it 'Is the values passed correctly?' do
+      expect(@book.title).to eq 'Afghanistan'
       expect(@book.publisher).to eq 'Ofouq'
       expect(@book.cover_state).to eq 'good'
     end

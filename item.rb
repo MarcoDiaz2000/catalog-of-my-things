@@ -31,4 +31,18 @@ class Item
   def generate_id
     rand(10..300)
   end
+
+  public
+
+  def to_hash
+    {
+      id: @id,
+      genre: @genre,
+      author: @author,
+      source: @source,
+      label: @label,
+      published_date: @published_date,
+      archived: @archived
+    }
+  end
 end
