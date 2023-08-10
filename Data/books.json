@@ -1,0 +1,16 @@
+[
+  {
+    "id": 277,
+    "title": "Afghanistan",
+    "publisher": "Nashir",
+    "cover_state": "Good",
+    "published_date": "1920-01-01"
+  },
+  {
+    "id": 47,
+    "title": "Mexeco",
+    "publisher": "Marco",
+    "cover_state": "Good",
+    "published_date": "2020-01-01"
+  }
+]
