@@ -19,4 +19,24 @@ class Book < Item
 
     false
   end
+
+  public
+
+  def to_hash
+    {
+      title: @title,
+      publisher: @publisher,
+      cover_state: @cover_state
+    }.merge(super)
+  end
+
+  def self.from_hash(hash)
+    new_book = Book.new(hash[:title], hash[:publisher], hash[:cover_state], hash[:published_date], archived: hash[:archived])
+    new_book.id = hash[:id]
+    new_book.genre = hash[:genre]
+    new_book.author = hash[:author]
+    new_book.source = hash[:source]
+    new_book.label = hash[:label]
+    new_book
+  end
 end
