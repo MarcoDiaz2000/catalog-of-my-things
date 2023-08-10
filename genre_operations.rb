@@ -26,15 +26,15 @@ class GenreOperations
       }
     end
 
-    File.write('genres.json', JSON.pretty_generate(genres_json))
+    File.write('./Data/genres.json', JSON.pretty_generate(genres_json))
 
     puts 'Genres saved successfully.'
   end
 
   def load_json
-    return unless File.exist?('genres.json')
+    return unless File.exist?('./Data/genres.json')
 
-    file_content = File.read('genres.json')
+    file_content = File.read('./Data/genres.json')
     genres_json = JSON.parse(file_content)
     genres_json.each do |genre_json|
       genre = Genre.new(genre_json['name'])

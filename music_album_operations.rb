@@ -41,15 +41,15 @@ class MusicAlbumOperations
       }
     end
 
-    File.write('music_album.json', JSON.pretty_generate(albums_json))
+    File.write('./Data/music_album.json', JSON.pretty_generate(albums_json))
 
     puts 'Albums saved successfully.'
   end
 
   def load_json
-    return unless File.exist?('music_album.json')
+    return unless File.exist?('./Data/music_album.json')
 
-    file_content = File.read('music_album.json')
+    file_content = File.read('./Data/music_album.json')
     albums_json = JSON.parse(file_content)
     albums_json.each do |album_json|
       genre_obj = Genre.new(album_json['genre'])
