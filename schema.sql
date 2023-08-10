@@ -18,6 +18,9 @@ CREATE TABLE Labels (
     color VARCHAR(50)
 );
 
+-- Create an index on the foreign key column in Items table
+CREATE INDEX idx_items_label_id ON Items(label_id);
+
 -- Create the Books table
 CREATE TABLE Books (
     id SERIAL PRIMARY KEY,
@@ -55,3 +58,5 @@ CREATE TABLE Author(
     LAST_NAME VARCHAR(50)
 );
 
+-- Create indexes on foreign key columns in the Games table
+CREATE INDEX idx_games_author_id ON Games(ID);
