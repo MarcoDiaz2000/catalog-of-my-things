@@ -16,7 +16,6 @@ describe Book do
       expect(@book.cover_state).to eq 'good'
     end
 
-
     it 'Is the object archivable?' do
       archivable = @book.move_to_archive
       expect(archivable).to be true
