@@ -1,0 +1,42 @@
+[
+  {
+    "id": 50,
+    "title": "Gift",
+    "color": "blue",
+    "items": [
+
+    ]
+  },
+  {
+    "id": 91,
+    "title": "New",
+    "color": "green",
+    "items": [
+
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Classic",
+    "color": "red",
+    "items": [
+
+    ]
+  },
+  {
+    "id": 79,
+    "title": "Bestseller",
+    "color": "Orange",
+    "items": [
+
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Sci-Fi",
+    "color": "purple",
+    "items": [
+
+    ]
+  }
+]

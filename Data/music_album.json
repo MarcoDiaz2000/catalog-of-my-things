@@ -1,0 +1,44 @@
+[
+  {
+    "id": 26,
+    "genre": "Rock",
+    "published_date": "2022-12-12",
+    "on_spotify": true,
+    "archived": false
+  },
+  {
+    "id": 211,
+    "genre": "Rock",
+    "published_date": "2012-12-12",
+    "on_spotify": true,
+    "archived": true
+  },
+  {
+    "id": 168,
+    "genre": "Cumbia",
+    "published_date": "2012-12-12",
+    "on_spotify": false,
+    "archived": false
+  },
+  {
+    "id": 128,
+    "genre": "Cumbia",
+    "published_date": "2012-12-12",
+    "on_spotify": true,
+    "archived": true
+  },
+  {
+    "id": 107,
+    "genre": "Cumbia",
+    "published_date": "2012-12-12",
+    "on_spotify": true,
+    "archived": true
+  },
+  {
+    "id": 34,
+    "genre": "Rock",
+    "published_date": "2023-09-09",
+    "on_spotify": true,
+    "archived": false
+  }
+]
