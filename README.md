@@ -20,6 +20,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🔭 Video Presentation](#video)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -36,8 +37,8 @@
   - [📝 License ](#-license-)
 
 
-# 📖 [catalog-of-my-things
-] <a name="about-project"></a>
+# 📖 [catalog-of-my-things]
+ <a name="about-project"></a>
 This project is made as part of the Microverse curriculum for module 4- Ruby and Databases. "Catalog of my things" is a simple console app that allows users to manage collections of the things: Books, Music Albums, Movies, and Games.
 ## 🛠 Built With <a name="built-with"></a>
 Ruby
@@ -63,6 +64,12 @@ Ruby
 - **TDD concept.**
 - **Unit tests using Rspec.**
 - **Implement classes and objects in Ruby.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Video Presentation <a name="video"></a>
+
+- [Video Presentation](https://drive.google.com/file/d/1QFXCOpt09OBtZaT-IKRuTmz1Dl0vDRUf/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
